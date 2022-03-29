@@ -15,19 +15,4 @@ conn.authenticate()
         console.error("Erro: Falha na conexão com o banco de dados.")
     })
 
-
-
-
-// Usuarios.create({                      criação de um usuário
-//     nome: 'Leticia',
-//     sobrenome: 'Neves',
-//     idade: 19,
-//     email: 'dredredre48@gmail.com'
-// })
-
-
-//Postagem.sync({ force: true })          criação da tabela
-
-//Usuarios.sync({force: true})            criação da tabela
-
 export default conn
