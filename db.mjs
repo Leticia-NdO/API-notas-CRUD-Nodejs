@@ -1,9 +1,9 @@
 import Sequelize from 'sequelize';
 
 // conexão com o banco de dados
-const conn = new Sequelize('code_drops_crud', 'root', 'root', {
-    host: "localhost",
-    dialect: 'mariadb',
+const conn = new Sequelize('nome do banco de dados', 'usuario', 'senha', {
+    host: "",
+    dialect: '',
     query: {raw: true}
 })
 
