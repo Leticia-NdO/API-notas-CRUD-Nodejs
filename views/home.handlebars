@@ -1,15 +1,25 @@
+<form action="/buscar" method="POST">                                       
+    <input type="text" name="busca">         
+    <button type="submit">Buscar</button>
+</form>
+<div>
 <a href="/cad"><button>Criar nova anotação</button></a>
-<a href="/src"><button>Buscar</button></a>
+</div>
 <h1>Notas: </h1>
 <hr>
 
 {{#each notas}}                 <!-- essa função each diz, para cada algo faça algo, no caso, para cada chamada de Post.findAll() (que resulta na variável posts), mostre o titulo e o conteudo desses posts  -->
 
 <small>{{createdAt}}</small>    <!-- esses são os nomes das chaves do array recebido -->
-<h1>{{titulo}}</h1>
+<h2>{{titulo}}</h2>
 <p>{{conteudo}}</p>             <!--  o titulo e conteudo aqui escritos são propriedades de posts, que contém o resultado de Post.findAll() -->
+{{#if imagem}}
+        <img class="card__image" src="{{imagem}}" alt="imagem">
+{{/if}}
+<div>
 <a href="/editar/{{id}}"><button>Editar</button></a>
 <a href="/deletar/{{id}}"><button>Deletar</button></a>
+</div>
 <hr>
 
 {{/each}}

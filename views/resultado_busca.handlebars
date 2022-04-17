@@ -3,6 +3,11 @@
 <small>{{createdAt}}</small>    <!-- esses são os nomes das chaves do array recebido -->
 <h1>{{titulo}}</h1>
 <p>{{conteudo}}</p> <!--  o titulo e conteudo aqui escritos são propriedades de posts, que contém o resultado de Post.findAll() -->
+<div>
+{{#if imagem}}
+        <img class="card__image" src="{{imagem}}" alt="imagem">
+{{/if}}
+</div>
 <a href="/editar/{{id}}"><button>Editar</button></a>
 <a href="/deletar/{{id}}"><button>Deletar</button></a>
 <hr>

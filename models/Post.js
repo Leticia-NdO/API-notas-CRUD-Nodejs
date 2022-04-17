@@ -10,25 +10,14 @@ const Post = conn.define('postagens', {
     conteudo: {
         type: Sequelize.TEXT,
         allowNull: false
-    }
+    },
+    imagem: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
 })
 
+// Post.sync({force: true})
 
-
-// const Usuarios = conn.define('usuarios', {
-//     nome: {
-//         type: Sequelize.STRING
-//     },
-//     sobrenome: {
-//         type: Sequelize.STRING
-//     },
-//     idade: {
-//         type: Sequelize.INTEGER
-//     },
-//     email: {
-//         type: Sequelize.STRING
-//     }
-
-// })
 
 export { Post }

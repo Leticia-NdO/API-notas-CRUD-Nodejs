@@ -1,8 +1,12 @@
-<form action="/add" method="POST">            <!-- o atributo method="" representa como os dados do formulário serão enviados para o backend-->
+<form action="/add" method="POST" enctype="multipart/form-data">            <!-- o atributo method="" representa como os dados do formulário serão enviados para o backend-->
+    
     <p>Título: </p>                           <!-- Ao enviar pelo método GET, os dados serão enviados pela url (params) -->
     <input type="text" name="titulo">         <!-- Ao enviar pelo método POST, os dados são enviados, mas não aparecem na url -->
     <p>Conteúdo: </p>
     <textarea name="conteudo"></textarea>
-    <button type="submit">Cadastrar postagem</button>
+    <p>Upload de imagem: </p>
+    <input type="file" name="imagem" accept="image/*/">
+    <div>
+    <button type="submit" class="btn btn-primary">Cadastrar postagem</button>
+    </div>
 </form>
-

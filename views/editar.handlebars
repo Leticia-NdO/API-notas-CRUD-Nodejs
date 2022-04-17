@@ -1,11 +1,15 @@
 {{#with nota}}
 
-<form action="/atualizar/{{id}}" method="POST">
+<form action="/atualizar/{{id}}" method="POST" enctype="multipart/form-data">
     <p>Título: </p>                           
     <input type="text" name="titulo" value="{{titulo}}">
     <p>Conteúdo: </p>
     <textarea name="conteudo">{{conteudo}}</textarea>
-    <button type="submit">Atualizar nota</button>
+    <div>
+    <input type="file" name="imagem" accept="image/*/">
+    </div>
+    <button type="submit" class="btn btn-primary">Atualizar nota</button>
+
 </form>
 
 {{/with}}
