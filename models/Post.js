@@ -17,7 +17,11 @@ const Post = conn.define('postagens', {
     },
 })
 
+<<<<<<< HEAD
 // Post.sync({force: true})
+=======
+//Post.sync({force: true})
+>>>>>>> 13a79c977cb8ed6c5f504cb82708d45758c7b05c
 
 
 export { Post }
